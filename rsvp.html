@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RSVP — #Paulyn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .rsvp-form{ max-width:600px; margin:30px auto; background:rgba(204,85,0,0.08); padding:30px; border-radius:12px; border:1px solid rgba(204,85,0,0.2); }
+    .form-group{ margin-bottom:20px; }
+    .form-group label{ display:block; margin-bottom:8px; color:var(--burnt-orange); font-weight:600; }
+    .form-group input, .form-group select, .form-group textarea{ width:100%; padding:12px; background:rgba(255,255,255,0.08); border:1px solid rgba(204,85,0,0.3); color:var(--pure-white); border-radius:6px; font-family:'Montserrat', sans-serif; }
+    .form-group input::placeholder, .form-group textarea::placeholder{ color:rgba(255,255,255,0.5); }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus{ outline:none; border-color:var(--burnt-orange); background:rgba(255,255,255,0.12); }
+    .form-group textarea{ resize:vertical; min-height:100px; }
+    .radio-group, .checkbox-group{ display:flex; gap:20px; flex-wrap:wrap; margin-top:10px; }
+    .radio-group label, .checkbox-group label{ display:flex; align-items:center; gap:8px; margin:0; cursor:pointer; font-weight:500; }
+    .radio-group input, .checkbox-group input{ cursor:pointer; width:18px; height:18px; }
+    .form-submit{ background:linear-gradient(90deg, var(--burnt-orange), var(--light-brown)); color:var(--nude); border:none; padding:14px 36px; font-weight:700; text-transform:uppercase; border-radius:6px; cursor:pointer; transition:all 0.3s ease; letter-spacing:1px; }
+    .form-submit:hover{ transform:scale(1.05); box-shadow:0 8px 25px rgba(204,85,0,0.4); }
+    .required{ color:var(--burnt-orange); }
+    .deadline{ text-align:center; margin-top:40px; padding-top:20px; border-top:1px solid rgba(204,85,0,0.15); font-size:0.95rem; }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <a class="page-logo" href="index.html">#Paulyn</a>
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="page-tabs">
+      <a href="get-to-know-us.html">Get to Know Us</a>
+      <a href="gallery.html#journey">Story</a>
+      <a href="album.html">Gallery</a>
+      <a href="program.html">Program</a>
+      <a href="venue.html">Venue</a>
+      <a href="rsvp.html" class="active">RSVP</a>
+      <a href="faq.html">Q&A</a>
+      <a href="gifts.html">Gifts</a>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-slideshow">
+      <div class="hero-slide hero-slide-1 active"></div>
+      <div class="hero-slide hero-slide-2"></div>
+      <div class="hero-slide hero-slide-3"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="couple-names">Confirm Your Seat</h1>
+      <p class="wedding-date">We'd love to celebrate with you!</p>
+    </div>
+  </section>
+
+  <main class="page-content center">
+    <section id="rsvp">
+      <h2 class="section-title">RSVP Form</h2>
+      <div class="section-body">
+        <p style="text-align: center; margin-bottom: 30px;">Please complete the form below to confirm your attendance. Your response helps us plan the perfect celebration.</p>
+      </div>
+
+      <form class="rsvp-form" id="rsvpForm">
+        <div class="form-group">
+          <label for="fullName">Full Name <span class="required">*</span></label>
+          <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+233 123 456 789">
+        </div>
+
+        <div class="form-group">
+          <label for="guests">Number of Guests <span class="required">*</span></label>
+          <select id="guests" name="guests" required>
+            <option value="">-- Select number --</option>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5+ Guests</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Will you attend? <span class="required">*</span></label>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="attendance" value="yes" required> Yes, with joy!
+            </label>
+            <label>
+              <input type="radio" name="attendance" value="no" required> Regretfully, no
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Dietary Restrictions</label>
+          <div class="checkbox-group">
+            <label>
+              <input type="checkbox" name="dietary" value="vegetarian"> Vegetarian
+            </label>
+            <label>
+              <input type="checkbox" name="dietary" value="vegan"> Vegan
+            </label>
+            <label>
+              <input type="checkbox" name="dietary" value="gluten-free"> Gluten-free
+            </label>
+            <label>
+              <input type="checkbox" name="dietary" value="halal"> Halal
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message for the Couple</label>
+          <textarea id="message" name="message" placeholder="Share your well-wishes and congratulations..."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Submit RSVP</button>
+
+        <div class="deadline">
+          <p><strong>RSVP Deadline:</strong> November 26, 2025</p>
+          <p style="margin-top: 12px; font-size: 0.9rem;">Questions? Email us at <strong style="color: var(--rose-gold);">rsvp@paulynwedding.com</strong></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+  <script>
+    document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your RSVP! We look forward to celebrating with you. 🎉');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Q&A — #Paulyn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .faq-container{ max-width:800px; margin:30px auto; }
+    .faq-item{ background:rgba(204,85,0,0.08); border:1px solid rgba(204,85,0,0.2); border-radius:8px; margin-bottom:16px; overflow:hidden; }
+    .faq-question{ padding:20px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; background:rgba(204,85,0,0.05); transition:background 0.3s ease; }
+    .faq-question:hover{ background:rgba(204,85,0,0.12); }
+    .faq-question h3{ color:var(--burnt-orange); font-size:1.1rem; margin:0; flex:1; }
+    .faq-toggle{ color:var(--burnt-orange); font-size:1.3rem; transition:transform 0.3s ease; }
+    .faq-item.active .faq-toggle{ transform:rotate(180deg); }
+    .faq-answer{ display:none; padding:20px; padding-top:0; color:rgba(255,255,255,0.9); line-height:1.8; }
+    .faq-item.active .faq-answer{ display:block; animation:fadeIn 0.3s ease; }
+    @keyframes fadeIn{ from{ opacity:0; } to{ opacity:1; } }
+    .faq-category{ margin-bottom:40px; }
+    .faq-category h2{ margin-bottom:20px; }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <a class="page-logo" href="index.html">#Paulyn</a>
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="page-tabs">
+      <a href="get-to-know-us.html">Get to Know Us</a>
+      <a href="gallery.html#journey">Story</a>
+      <a href="album.html">Gallery</a>
+      <a href="program.html">Program</a>
+      <a href="venue.html">Venue</a>
+      <a href="rsvp.html">RSVP</a>
+      <a href="faq.html" class="active">Q&A</a>
+      <a href="gifts.html">Gifts</a>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-slideshow">
+      <div class="hero-slide hero-slide-1 active"></div>
+      <div class="hero-slide hero-slide-2"></div>
+      <div class="hero-slide hero-slide-3"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="couple-names">Questions?</h1>
+      <p class="wedding-date">Answers to your most asked questions</p>
+    </div>
+  </section>
+
+  <main class="page-content center">
+    <section id="faq">
+      <div class="faq-container">
+        <div class="faq-category">
+          <h2 class="section-title">General Questions</h2>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>When and where is the wedding?</h3>
+              <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Paul and Gwendolyn are getting married on <strong>December 26, 2025</strong> in Accra, Ghana. The ceremony will be held at Kingdom Hall at 2:00 PM, followed by reception at Idrowyte Event Center at 5:00 PM.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>When is the RSVP deadline?</h3>
+              <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Please RSVP by <strong>November 26, 2025</strong>. This deadline helps us finalize our guest count and catering arrangements. If you have a special circumstance, please reach out to us directly.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What should I wear?</h3>
+              <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>We invite you to wear <strong>cocktail or formal attire</strong>. The dress code is elegant and semiformal. Think dresses, suits, or traditional formal wear. We'd love to see you celebrate in something that makes you feel amazing!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2 class="section-title">Logistics</h2>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Is transportation provided?</h3>
+              <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Yes! We provide shuttle service from selected hotels to both the ceremony and reception venues. When you RSVP, indicate if you need transportation, and we'll arrange pickup times for you.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Where should I stay?</h3>
+              <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>We've arranged special discounted rates at several hotels near the venues. Check our <a href="venue.html" style="color: var(--rose-gold); text-decoration: underline;">Venue page</a> for hotel recommendations. Mention "Paulyn Wedding" when booking to receive your discount!</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What's the parking situation?</h3>
+              <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Ample parking is available at both venues. Valet service will be provided at the reception venue for your convenience, so you won't need to worry about parking.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2 class="section-title">Dietary & Accessibility</h2>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Do you accommodate dietary restrictions?</h3>
+              <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Absolutely! Please indicate any dietary restrictions when you RSVP. We accommodate vegetarian, vegan, gluten-free, halal, and other dietary needs. We want everyone to enjoy the celebration!</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Is the venue accessible?</h3>
+              <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Both venues are wheelchair accessible. If you have specific accessibility needs, please reach out to us at <strong>rsvp@paulynwedding.com</strong>, and we'll ensure everything is arranged for your comfort.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can I bring children?</h3>
+              <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Children are welcome at our celebration! Please include them in your RSVP. We recommend discussing any childcare or seating preferences when you respond.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-category">
+          <h2 class="section-title">Photos & Sharing</h2>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can I take photos during the ceremony?</h3>
+              <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>We ask that you refrain from taking photos during the ceremony so everyone can fully experience the moment. Feel free to take photos during the reception and cocktail hour!</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How do I share photos with you?</h3>
+              <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>Tag us with <strong>#Paulyn</strong> on Instagram and social media! We'll be collecting all photos with this hashtag to create a beautiful shared album of memories from our special day.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+  <script>
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', function() {
+        const item = this.closest('.faq-item');
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

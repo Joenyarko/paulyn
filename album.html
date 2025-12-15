@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Photo Album — Paul & Gwendolyn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="page-header">
+    <a class="page-logo" href="index.html">#Paulyn</a>
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="page-tabs">
+      <a href="get-to-know-us.html">Get to Know Us</a>
+      <a href="gallery.html#journey">Story</a>
+      <a href="album.html" class="active">Gallery</a>
+      <a href="program.html">Program</a>
+      <a href="venue.html">Venue</a>
+      <a href="rsvp.html">RSVP</a>
+      <a href="faq.html">Q&A</a>
+      <a href="gifts.html">Gifts</a>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-slideshow">
+      <div class="hero-slide hero-slide-1 active"></div>
+      <div class="hero-slide hero-slide-2"></div>
+      <div class="hero-slide hero-slide-3"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="couple-names">Our Gallery</h1>
+      <p class="wedding-date">Moments of love captured forever</p>
+    </div>
+  </section>
+
+  <main class="page-content center">
+    <section id="album">
+      <h2 class="section-title">Moments</h2>
+
+      <style>
+        .album-slideshow { max-width:1000px; margin:30px auto; position:relative; }
+        .album-slide { display:none; }
+        .album-slide.active { display:block; }
+        .album-slide img { cursor:pointer; transition:transform 0.3s ease; }
+        .album-slide img:hover { transform:scale(1.02); }
+        .lightbox { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.9); z-index:1000; align-items:center; justify-content:center; }
+        .lightbox.active { display:flex; }
+        .lightbox-content { position:relative; max-width:90%; max-height:90vh; }
+        .lightbox-img { width:100%; height:auto; border-radius:8px; }
+        .lightbox-close { position:absolute; top:-40px; right:0; color:#fff; font-size:2rem; cursor:pointer; }
+        .lightbox-text { color:var(--soft-gold); text-align:center; margin-top:16px; font-size:1.1rem; }
+      </style>
+
+      <div class="album-slideshow">
+        <div class="album-slide active"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80" alt="Museum Days" style="width:100%; height:500px; object-fit:cover; border-radius:8px;"></div>
+        <div class="album-slide"><img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=80" alt="Golden Hour" style="width:100%; height:500px; object-fit:cover; border-radius:8px;"></div>
+        <div class="album-slide"><img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=1200&q=80" alt="The Moment" style="width:100%; height:500px; object-fit:cover; border-radius:8px;"></div>
+        <div class="album-slide"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80" alt="Us Together" style="width:100%; height:500px; object-fit:cover; border-radius:8px;"></div>
+        <div class="album-slide"><img src="https://images.unsplash.com/photo-1583337319349-d51a947d16ba?auto=format&fit=crop&w=1200&q=80" alt="Hand in Hand" style="width:100%; height:500px; object-fit:cover; border-radius:8px;"></div>
+        <div class="album-slide"><img src="https://images.unsplash.com/photo-1465495976519-ba2b2935275f?auto=format&fit=crop&w=1200&q=80" alt="Dancing Together" style="width:100%; height:500px; object-fit:cover; border-radius:8px;"></div>
+        <div class="album-controls" style="position:absolute; top:50%; left:12px; transform:translateY(-50%); z-index:5;"><button class="album-prev" style="background:rgba(0,0,0,0.5); color:#fff; border:none; padding:10px 12px; border-radius:6px; font-size:1.4rem; cursor:pointer;">‹</button></div>
+        <div class="album-controls" style="position:absolute; top:50%; right:12px; transform:translateY(-50%); z-index:5;"><button class="album-next" style="background:rgba(0,0,0,0.5); color:#fff; border:none; padding:10px 12px; border-radius:6px; font-size:1.4rem; cursor:pointer;">›</button></div>
+      </div>
+
+      <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+          <span class="lightbox-close">&times;</span>
+          <img class="lightbox-img" src="" alt="">
+          <div class="lightbox-text">❤️ Our love is eternal ❤️</div>
+        </div>
+      </div>
+
+      <hr style="margin:50px 0; border-color: rgba(244, 166, 184, 0.15);">
+  </main>
+
+  <script>
+    // Album slideshow with lightbox
+    (function(){
+      const slides = Array.from(document.querySelectorAll('.album-slide'));
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = lightbox.querySelector('.lightbox-img');
+      const lightboxClose = lightbox.querySelector('.lightbox-close');
+      const images = Array.from(document.querySelectorAll('.album-slide img'));
+      
+      if(!slides || slides.length === 0) return;
+      let current = slides.findIndex(s => s.classList.contains('active'));
+      if(current < 0) current = 0, slides[0].classList.add('active');
+
+      function show(i){
+        slides.forEach(s => s.classList.remove('active'));
+        slides[i].classList.add('active');
+      }
+
+      function next(){
+        current = (current + 1) % slides.length;
+        show(current);
+      }
+      function prev(){
+        current = (current - 1 + slides.length) % slides.length;
+        show(current);
+      }
+
+      const nextBtn = document.querySelector('.album-next');
+      const prevBtn = document.querySelector('.album-prev');
+      if(nextBtn) nextBtn.addEventListener('click', next);
+      if(prevBtn) prevBtn.addEventListener('click', prev);
+
+      // Lightbox
+      images.forEach(img => {
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.src;
+          lightbox.classList.add('active');
+        });
+      });
+      lightboxClose.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+      });
+      lightbox.addEventListener('click', (e) => {
+        if(e.target === lightbox) lightbox.classList.remove('active');
+      });
+
+      setInterval(next, 6000);
+    })();
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>

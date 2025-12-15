@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gifts & Registry — #Paulyn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gifts-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px; margin:30px 0; }
+    .gift-card{ background:rgba(204,85,0,0.08); border:1px solid rgba(204,85,0,0.2); border-radius:12px; padding:24px; text-align:center; transition:all 0.3s ease; }
+    .gift-card:hover{ transform:translateY(-8px); box-shadow:0 12px 30px rgba(204,85,0,0.2); border-color:var(--burnt-orange); }
+    .gift-icon{ font-size:3.5rem; color:var(--burnt-orange); margin-bottom:16px; }
+    .gift-card h3{ color:var(--soft-gold); font-size:1.3rem; margin-bottom:12px; }
+    .gift-card p{ color:rgba(255,255,255,0.85); margin-bottom:16px; font-size:0.95rem; }
+    .gift-link{ display:inline-block; padding:10px 20px; background:linear-gradient(90deg, var(--burnt-orange), var(--light-brown)); color:var(--nude); text-decoration:none; border-radius:6px; font-weight:600; transition:all 0.3s ease; }
+    .gift-link:hover{ transform:scale(1.05); }
+    .registry-info{ background:rgba(204,85,0,0.1); border-left:4px solid var(--burnt-orange); padding:20px; border-radius:6px; margin:30px 0; }
+    .registry-info h3{ color:var(--burnt-orange); margin-top:0; }
+    .registry-info p{ margin:8px 0; }
+    .registry-info strong{ color:var(--soft-gold); }
+  </style>
+</head>
+<body>
+  <header class="page-header">
+    <a class="page-logo" href="index.html">#Paulyn</a>
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="page-tabs">
+      <a href="get-to-know-us.html">Get to Know Us</a>
+      <a href="gallery.html#journey">Story</a>
+      <a href="album.html">Gallery</a>
+      <a href="program.html">Program</a>
+      <a href="venue.html">Venue</a>
+      <a href="rsvp.html">RSVP</a>
+      <a href="faq.html">Q&A</a>
+      <a href="gifts.html" class="active">Gifts</a>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-slideshow">
+      <div class="hero-slide hero-slide-1 active"></div>
+      <div class="hero-slide hero-slide-2"></div>
+      <div class="hero-slide hero-slide-3"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="couple-names">Gifts & Registry</h1>
+      <p class="wedding-date">Your presence is the best present, but we'd be grateful for your love and support</p>
+    </div>
+  </section>
+
+  <main class="page-content center">
+    <section id="gifts">
+      <div class="registry-info">
+        <h3><i class="fas fa-heart" style="color: var(--soft-gold); margin-right: 10px;"></i> Your Presence is Our Present</h3>
+        <p>The most important gift for us is having you celebrate this special day with us. Your love, support, and presence mean more than anything in the world.</p>
+      </div>
+
+      <hr style="margin:50px 0; border-color: rgba(244, 166, 184, 0.15);">
+
+      <section id="cash-gift">
+        <h2 class="section-title">Monetary Gifts</h2>
+        <div class="section-body">
+          <p>If you prefer to give a monetary gift, we appreciate it graciously. Gifts of money help us start our married life and build our future together. The following options are available for your convenience:</p>
+          
+          <div style="margin-top:24px; padding:20px; background:rgba(204,85,0,0.08); border-radius:8px;">
+            <h3 style="color: var(--soft-gold); margin-top:0;">Bank Transfer</h3>
+            <p>Account Owner: Paul & Gwendolyn Wedding Account<br>
+            Bank Name: [Bank Name]<br>
+            Account Number: [Account Number]<br>
+            Reference: #Paulyn</p>
+          </div>
+
+          <div style="margin-top:24px; padding:20px; background:rgba(204,85,0,0.08); border-radius:8px;">
+            <h3 style="color: var(--soft-gold); margin-top:0;">Mobile Money</h3>
+            <p>MTN Mobile Money: +233 123 456 789<br>
+            Airtel Money: +233 987 654 321<br>
+            Reference: #Paulyn</p>
+          </div>
+
+          <div style="margin-top:24px; padding:20px; background:rgba(204,85,0,0.08); border-radius:8px;">
+            <h3 style="color: var(--soft-gold); margin-top:0;">During the Celebration</h3>
+            <p>A gift table will be available at the reception where you can present your gift in person. Our family members will be there to receive and acknowledge your generosity.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
