@@ -38,7 +38,7 @@ function initializeCountdown(){
   const hoursEl = document.getElementById('hours');
   const minutesEl = document.getElementById('minutes');
   const secondsEl = document.getElementById('seconds');
-  const weddingDate = new Date('December 26, 2025 14:00:00').getTime();
+  const weddingDate = new Date('December 26, 2025 11:00:00').getTime();
 
   function update(){
     const now = Date.now();

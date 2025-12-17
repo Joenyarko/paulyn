@@ -34,7 +34,6 @@
     </button>
     <nav class="page-tabs">
       <a href="get-to-know-us.html">Get to Know Us</a>
-      <a href="gallery.html#journey">Story</a>
       <a href="album.html">Gallery</a>
       <a href="program.html">Program</a>
       <a href="venue.html">Venue</a>
@@ -52,98 +51,24 @@
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1 class="couple-names">Confirm Your Seat</h1>
-      <p class="wedding-date">We'd love to celebrate with you!</p>
+      <h1 class="couple-names">RSVP</h1>
+      <p class="wedding-date">Friday, December 26, 2025 • 11:00 AM</p>
+      <p class="wedding-date" style="margin-top:6px;">Kingdom Hall of Jehovah's Witnesses, Dansoman (Exhibition)</p>
     </div>
   </section>
 
   <main class="page-content center">
     <section id="rsvp">
-      <h2 class="section-title">RSVP Form</h2>
-      <div class="section-body">
-        <p style="text-align: center; margin-bottom: 30px;">Please complete the form below to confirm your attendance. Your response helps us plan the perfect celebration.</p>
+      <h2 class="section-title">RSVP Details</h2>
+      <div class="section-body" style="text-align:center;">
+        <p style="margin-bottom:16px;">We can't wait to celebrate our special day with you!</p>
+        <p style="margin-bottom:16px;"><strong>Nii Addo:</strong> 0244940339 &nbsp;|&nbsp; <strong>Lyan:</strong> 0540411155</p>
+        <p style="margin-bottom:16px;">If you will join remotely, use the KHCONF link: <a href="https://meet.jwconf.com/598199066" style="color: var(--burnt-orange);">meet.jwconf.com/598199066</a></p>
+        <p style="margin-bottom:0;"><strong>RSVP Deadline:</strong> November 26, 2025</p>
       </div>
-
-      <form class="rsvp-form" id="rsvpForm">
-        <div class="form-group">
-          <label for="fullName">Full Name <span class="required">*</span></label>
-          <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email Address <span class="required">*</span></label>
-          <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="+233 123 456 789">
-        </div>
-
-        <div class="form-group">
-          <label for="guests">Number of Guests <span class="required">*</span></label>
-          <select id="guests" name="guests" required>
-            <option value="">-- Select number --</option>
-            <option value="1">1 Guest</option>
-            <option value="2">2 Guests</option>
-            <option value="3">3 Guests</option>
-            <option value="4">4 Guests</option>
-            <option value="5">5+ Guests</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Will you attend? <span class="required">*</span></label>
-          <div class="radio-group">
-            <label>
-              <input type="radio" name="attendance" value="yes" required> Yes, with joy!
-            </label>
-            <label>
-              <input type="radio" name="attendance" value="no" required> Regretfully, no
-            </label>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label>Dietary Restrictions</label>
-          <div class="checkbox-group">
-            <label>
-              <input type="checkbox" name="dietary" value="vegetarian"> Vegetarian
-            </label>
-            <label>
-              <input type="checkbox" name="dietary" value="vegan"> Vegan
-            </label>
-            <label>
-              <input type="checkbox" name="dietary" value="gluten-free"> Gluten-free
-            </label>
-            <label>
-              <input type="checkbox" name="dietary" value="halal"> Halal
-            </label>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Message for the Couple</label>
-          <textarea id="message" name="message" placeholder="Share your well-wishes and congratulations..."></textarea>
-        </div>
-
-        <button type="submit" class="form-submit">Submit RSVP</button>
-
-        <div class="deadline">
-          <p><strong>RSVP Deadline:</strong> November 26, 2025</p>
-          <p style="margin-top: 12px; font-size: 0.9rem;">Questions? Email us at <strong style="color: var(--rose-gold);">rsvp@paulynwedding.com</strong></p>
-        </div>
-      </form>
     </section>
   </main>
 
   <script src="script.js" defer></script>
-  <script>
-    document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Thank you for your RSVP! We look forward to celebrating with you. 🎉');
-      this.reset();
-    });
-  </script>
 </body>
 </html>
