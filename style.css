@@ -66,7 +66,12 @@ body{
   font-style:normal; 
 }
 .wedding-date{ font-size:1.4rem; color:var(--nude); margin-bottom:24px; font-weight:300; letter-spacing:2px; }
-.hashtag{ color:var(--burnt-orange); font-weight:600; }
+.hashtag{ 
+  color:var(--burnt-orange); 
+  font-weight:400; 
+  font-family:'Great Vibes', 'Dancing Script', cursive; 
+  font-size:1.3em; 
+}
 .countdown-container{ display:flex; justify-content:center; gap:30px; margin-bottom:40px; flex-wrap:wrap; }
 .countdown-item{ display:flex; flex-direction:column; align-items:center; }
 .countdown-value{ font-size:3.2rem; font-weight:700; color:var(--burnt-orange); text-shadow:0 2px 10px rgba(0,0,0,0.3); }
@@ -78,7 +83,14 @@ body{
 
 /* Header for inner pages (tabs) */
 .page-header{ position:fixed; top:0; left:0; right:0; display:flex; justify-content:space-between; align-items:center; padding:14px 6%; background:linear-gradient(180deg, rgba(10,10,15,0.95) 0%, rgba(10,10,15,0.85) 100%); z-index:1000; gap:20px; backdrop-filter:blur(10px); box-shadow:0 4px 20px rgba(0,0,0,0.3); }
-.page-logo{ color:var(--soft-gold); font-weight:700; text-decoration:none; font-size:1.2rem; letter-spacing:1px; }
+.page-logo{ 
+  color:var(--soft-gold); 
+  font-weight:400; 
+  text-decoration:none; 
+  font-size:1.4rem; 
+  letter-spacing:1px; 
+  font-family:'Great Vibes', 'Dancing Script', cursive; 
+}
 .page-tabs{ display:flex; gap:24px; }
 .page-tabs a{ color:var(--pure-white); text-decoration:none; padding:8px 12px; border-radius:4px; font-weight:600; font-size:0.95rem; position:relative; transition:all 0.3s ease; }
 .page-tabs a::after{ content:''; position:absolute; bottom:0; left:0; width:0; height:2px; background:linear-gradient(90deg, var(--burnt-orange), var(--soft-gold)); transition:width 0.3s ease; }
